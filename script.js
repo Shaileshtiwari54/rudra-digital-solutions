@@ -1,26 +1,24 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
 
-const menu = document.querySelector(".menu");
-const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".main-nav");
+
 menu?.addEventListener("click", () => {
-  const open = nav.style.display === "flex";
-  nav.style.display = open ? "" : "flex";
-  nav.style.flexDirection = "column";
-  nav.style.position = "absolute";
-  nav.style.top = "70px";
-  nav.style.right = "5%";
-  nav.style.padding = "18px";
-  nav.style.background = "#0b2135";
-  nav.style.border = "1px solid rgba(255,255,255,.1)";
-  nav.style.borderRadius = "14px";
+  const open = nav.classList.toggle("open");
+  menu.setAttribute("aria-expanded", String(open));
 });
 
-document.querySelectorAll("nav a").forEach(a => a.addEventListener("click", () => {
-  if (window.innerWidth <= 900) nav.style.display = "";
-}));
+document.querySelectorAll(".main-nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menu?.setAttribute("aria-expanded", "false");
+  });
+});
 
-document.getElementById("demoForm")?.addEventListener("submit", e => {
-  e.preventDefault();
+document.getElementById("demoForm")?.addEventListener("submit", event => {
+  event.preventDefault();
+
   const name = document.getElementById("name").value.trim();
   const company = document.getElementById("company").value.trim();
   const mobile = document.getElementById("mobile").value.trim();
@@ -28,8 +26,7 @@ document.getElementById("demoForm")?.addEventListener("submit", e => {
   const product = document.getElementById("product").value;
   const message = document.getElementById("message").value.trim();
 
-  const text =
-`Rudra Demo Request
+  const text = `Rudra Digital Solutions — Demo Request
 Name: ${name}
 Company: ${company || "-"}
 Mobile: ${mobile}
@@ -37,7 +34,7 @@ Email: ${email || "-"}
 Product: ${product}
 Message: ${message || "-"}`;
 
-  // Replace 919999999999 with your WhatsApp number including country code.
+  // IMPORTANT: replace this placeholder with the real WhatsApp number.
   const whatsappNumber = "919999999999";
   window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank");
 });

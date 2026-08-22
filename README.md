@@ -1,14 +1,17 @@
-# Rudra Digital Solutions — Professional Website v2
+# Rudra Digital Solutions — Website v3
 
-GitHub Pages-ready static website for Rudra ERP and Rudra Eye.
+Premium enterprise-style static website for Rudra ERP and Rudra Eye.
 
-Changes in v2:
-- More professional, restrained typography
-- Smaller hero heading and section headings
-- Compact Rudra Eye / Smart Attendance card
-- Built-in vector-style Rudra Digital logo (no external image required)
-- Tighter spacing and smaller cards
-- Responsive mobile layout
+## Files
+- `index.html`
+- `style.css`
+- `script.js`
+- `logo.png`
 
-## Publish
-Upload `index.html`, `style.css`, `script.js`, and `README.md` to the repository root and keep GitHub Pages on `main` / root.
+## GitHub Pages
+Keep these files in the repository root and publish from `main` / root.
+
+## Important
+Before publishing, replace the placeholder WhatsApp number in `script.js`:
+`919999999999`
+with the real WhatsApp number including country code.
