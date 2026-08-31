@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Demo | Rudra ERP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><img src="logo.png" alt="Rudra ERP" class="brand-logo"></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="rudra-eye.html">Rudra Eye</a>
+    <a href="platform.html">Platform</a>
+    <a href="demo.html" class="nav-cta active">Request a Demo</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="section demo" style="padding-top:56px;">
+    <div class="container demo-grid">
+      <div class="demo-copy">
+        <span class="eyebrow">REQUEST A DEMO</span>
+        <h2 style="font-size:clamp(26px,3vw,34px);font-weight:700;margin-bottom:12px;">See the Rudra ecosystem in action</h2>
+        <p class="lead">Tell us what you want to explore. Your enquiry will open WhatsApp with the details ready to send.</p>
+        <div class="demo-products">
+          <span>Rudra ERP</span>
+          <span>Rudra Eye</span>
+          <span>Both</span>
+        </div>
+      </div>
+      <form id="demoForm" class="demo-form">
+        <div class="form-row">
+          <input id="name" required placeholder="Your Name">
+          <input id="company" placeholder="Company Name">
+        </div>
+        <div class="form-row">
+          <input id="mobile" required placeholder="Mobile Number">
+          <input id="email" type="email" placeholder="Email">
+        </div>
+        <select id="product">
+          <option>Rudra ERP</option>
+          <option>Rudra Eye</option>
+          <option>Both</option>
+        </select>
+        <textarea id="message" rows="4" placeholder="What would you like to explore?"></textarea>
+        <button class="btn primary full" type="submit">Request Demo on WhatsApp →</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What is Rudra ERP?</summary>
+          <p>Rudra ERP is an enterprise platform focused on infrastructure and construction operations, covering projects, procurement, stores, accounts and HRMS.</p>
+        </details>
+        <details>
+          <summary>What is Rudra Eye?</summary>
+          <p>Rudra Eye is a mobile attendance solution using face recognition and GPS verification with Punch In/Out and attendance logs.</p>
+        </details>
+        <details>
+          <summary>Can I request a product demo?</summary>
+          <p>Yes. Use this form and send the enquiry through WhatsApp.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Rudra ERP" class="footer-logo">
+      <div><strong>RUDRA ERP</strong><p>Enterprise EPC · Projects · Procurement · People</p></div>
+    </div>
+    <div class="footer-links">
+      <a href="solutions.html">Solutions</a> · <a href="rudra-eye.html">Rudra Eye</a> · <a href="platform.html">Platform</a> · <a href="demo.html">Demo</a>
+    </div>
+    <div class="footer-copy">© <span id="year"></span> Rudra ERP</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
